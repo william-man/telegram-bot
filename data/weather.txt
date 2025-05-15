@@ -1,0 +1,17 @@
+Weather refers to the short-term atmospheric conditions in a specific location. It includes phenomena such as temperature, humidity, precipitation, wind, cloudiness, and atmospheric pressure.
+
+Temperature is a measure of how hot or cold the atmosphere is, typically measured in degrees Celsius or Fahrenheit. It is influenced by sunlight, latitude, altitude, and the time of year.
+
+Humidity refers to the amount of water vapor in the air. High humidity can make temperatures feel warmer, while low humidity often feels cooler and drier.
+
+Precipitation includes any form of water that falls from the sky, such as rain, snow, sleet, or hail. It is caused by the condensation of moisture in the atmosphere.
+
+Wind is the movement of air caused by differences in atmospheric pressure. Wind can affect temperature, humidity, and the distribution of weather systems.
+
+Clouds form when moist air rises and cools, causing water vapor to condense into tiny droplets. Different types of clouds (like cumulus, stratus, and cirrus) indicate different weather patterns.
+
+Atmospheric pressure, or barometric pressure, is the force exerted by the weight of the air above a given point. High pressure usually brings fair weather, while low pressure often leads to storms or precipitation.
+
+Weather forecasts are predictions based on data from satellites, weather stations, and computer models. Forecasts typically include temperature highs and lows, expected precipitation, and wind speeds.
+
+The difference between weather and climate is that weather is short-term and localized, while climate describes long-term patterns over decades or centuries.
