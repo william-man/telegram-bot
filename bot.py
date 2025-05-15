@@ -28,6 +28,8 @@ class Bot:
                     response: <input_text>
                 /code
                     response: https://github.com/william-man/telegram-bot
+                /query <query>
+                    response: <result from llama>
         """)
 
     async def query(self, update: Update, context: ContextTypes.DEFAULT_TYPE)-> None:
