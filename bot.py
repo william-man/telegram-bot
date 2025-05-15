@@ -1,0 +1,25 @@
+from telegram import Update
+from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+
+class Bot:
+    def __init__(self, token:str):
+        self.token = token
+        self.app = ApplicationBuilder().token(self.token).build()
+
+    async def hello(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+        await update.message.reply_text(f'Hello {update.effective_user.first_name}')
+
+    async def echo(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+        response = " ".join(context.args)
+        await update.message.reply_text(response)
+
+    def run(self):
+        self.app.add_handler(CommandHandler("hello", self.hello))
+        self.app.add_handler(CommandHandler("echo", self.echo))
+        print("Running Bot...")
+        self.app.run_polling()
+
+if __name__ == "__main__":
+    TOKEN = "8057584485:AAEgtc-MRy4tg7AdbCWnAh44ISOsOA7pYZY"
+    bot = Bot(TOKEN)
+    bot.run()
