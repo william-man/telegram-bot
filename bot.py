@@ -1,5 +1,7 @@
+import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+from dotenv import load_dotenv
 
 class Bot:
     def __init__(self, token:str):
@@ -16,6 +18,9 @@ class Bot:
     async def code(self, update: Update, context: ContextTypes.DEFAULT_TYPE)-> None:
         await update.message.reply_text("https://github.com/william-man/telegram-bot")
 
+    async def help(self, update: Update, context: ContextTypes.DEFAULT_TYPE)-> None:
+        await update.message.reply_text("Hello")
+
     def run(self):
         self.app.add_handler(CommandHandler("hello", self.hello))
         self.app.add_handler(CommandHandler("echo", self.echo))
@@ -24,6 +29,7 @@ class Bot:
         self.app.run_polling()
 
 if __name__ == "__main__":
-    TOKEN = "8057584485:AAEgtc-MRy4tg7AdbCWnAh44ISOsOA7pYZY"
+    load_dotenv()
+    TOKEN = os.getenv("BOT_TOKEN")
     bot = Bot(TOKEN)
     bot.run()
