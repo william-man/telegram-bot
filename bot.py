@@ -13,9 +13,13 @@ class Bot:
         response = " ".join(context.args)
         await update.message.reply_text(response)
 
+    async def code(self, update: Update, context: ContextTypes.DEFAULT_TYPE)-> None:
+        await update.message.reply_text("https://github.com/william-man/telegram-bot")
+
     def run(self):
         self.app.add_handler(CommandHandler("hello", self.hello))
         self.app.add_handler(CommandHandler("echo", self.echo))
+        self.app.add_handler(CommandHandler("code", self.code))
         print("Running Bot...")
         self.app.run_polling()
 
